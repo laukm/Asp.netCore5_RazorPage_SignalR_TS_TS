@@ -5,8 +5,9 @@
     "noEmitOnError": true,
     "removeComments": false,
     "sourceMap": true,
-    "target": "es5",
-    "outDir": "wwwroot/js/"
+    "target": "ES6",    
+    "outDir": "wwwroot/js/",
+    "moduleResolution": "Node"
   },
   "exclude": [
     "node_modules",

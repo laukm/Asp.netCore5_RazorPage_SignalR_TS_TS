@@ -1,13 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var signalR = require("@microsoft/signalr");
+import * as signalR from "@microsoft/signalr";
 var counter = document.getElementById("viewCounter");
 // create connection
-var connection = new signalR.HubConnectionBuilder()
+let connection = new signalR.HubConnectionBuilder()
     .withUrl("/hub/view")
     .build();
 // on view update message from client
-connection.on("viewCountUpdate", function (value) {
+connection.on("viewCountUpdate", (value) => {
     counter.innerText = value.toString();
 });
 // notify server we're watching

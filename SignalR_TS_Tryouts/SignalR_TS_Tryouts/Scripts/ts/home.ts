@@ -26,4 +26,4 @@ function startFail() {
     console.log("Connection failed.");
 }
 
-connection.start().then(startSuccess, startFail); 
+connection.start().then(startSuccess, startFail);
